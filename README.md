@@ -8,3 +8,4 @@ This application does the follow:
   3. Generates a random String for password
   4. Has Setter methods to change the password, mailbox capacity, and define an alternate email address.
   5. Has Getter methods to display the full name of User, email, and mailbox capacity.
+
