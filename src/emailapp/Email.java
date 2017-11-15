@@ -7,24 +7,29 @@ public class Email {
 	private String lastName;
 	private String password;
 	private String department;
+	private String email;
 	private int mailboxCapacity;
 	private int defaultPasswordLength = 10;
 	private String alternateEmail;
+	private String company = "acmecorp.com";
 	
 	// Construct an email with the follow syntax: firstname.lastname@company.com
 	public Email(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		System.out.println("EMAIL CREATED: " + this.firstName + " " + this.lastName);
 		
 		// Call a method to set department - return department
 		this.department = setDepartment();
 		
-		System.out.println("DEPARTMENT: " + this.department);
-		
 		// Call a method to set random password - return Randomly generated password
 		this.password = setRandomPassword(defaultPasswordLength);
-		System.out.println("PASSWORD: " + this.password);
+		//System.out.println("PASSWORD: " + this.password);
+		
+		// Combine elements generating email - fn.ln@dpt.company.com
+		email = this.firstName + "." + this.lastName + "@" + this.department + "." + this.company;
+		email = email.toLowerCase();
+		
+		System.out.println("EMAIL: " + this.email);
 	}
 	
 	// Determine the department
