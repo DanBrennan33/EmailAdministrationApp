@@ -23,7 +23,6 @@ public class Email {
 		
 		// Call a method to set random password - return Randomly generated password
 		this.password = setRandomPassword(defaultPasswordLength);
-		//System.out.println("PASSWORD: " + this.password);
 		
 		// Combine elements generating email - fn.ln@dpt.company.com
 		email = this.firstName + "." + this.lastName + "@" + this.department + "." + this.company;
@@ -83,7 +82,7 @@ public class Email {
 	}
 	
 	public void setAlternateEmail(String altEmail) {
-		this.alternateEmail = altEmail + "@" + this.company;
+		this.alternateEmail = altEmail;
 	}
 	
 	/*
@@ -91,7 +90,22 @@ public class Email {
 	 * name
 	 * email
 	 * mailbox capacity
+	 * password
 	 * 
 	 */
+	public String getFullName() {
+		return firstName + " " + lastName;
+	}
+	
+	public String getAlternateEmail() {
+		return alternateEmail;
+	}
+	
+	public int getMailboxCapacity() {
+		return mailboxCapacity;
+	}
+	public String getPassword() {
+		return password;
+	}
 	
 }
