@@ -3,6 +3,7 @@
 Scenario: You are an IT Support Administrator Specialist and are charged with the task of creating emails for new hires.
 
 This application does the follow:
+
   1. Generates an email with the follow syntax: firstname.lastname@department.company.com
   2. Determine the department(sales, development, accounting), if none leaves blank.
   3. Generates a random String for password
