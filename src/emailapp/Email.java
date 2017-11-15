@@ -8,7 +8,7 @@ public class Email {
 	private String password;
 	private String department;
 	private String email;
-	private int mailboxCapacity;
+	private int mailboxCapacity = 500;
 	private int defaultPasswordLength = 10;
 	private String alternateEmail;
 	private String company = "acmecorp.com";
@@ -74,7 +74,17 @@ public class Email {
 	 * define an alternate email address
 	 * 
 	 */
+	public void changePassword(String password) {
+		this.password = password;
+	}
 	
+	public void setMailboxCapacity(int capacity) {
+		this.mailboxCapacity = capacity;
+	}
+	
+	public void setAlternateEmail(String altEmail) {
+		this.alternateEmail = altEmail + "@" + this.company;
+	}
 	
 	/*
 	 * Have get methods to display:
