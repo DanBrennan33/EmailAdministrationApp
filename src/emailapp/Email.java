@@ -28,7 +28,6 @@ public class Email {
 		email = this.firstName + "." + this.lastName + "@" + this.department + "." + this.company;
 		email = email.toLowerCase();
 		
-		System.out.println("EMAIL: " + this.email);
 	}
 	
 	// Determine the department
@@ -93,6 +92,10 @@ public class Email {
 	 * password
 	 * 
 	 */
+	public String getEmail() {
+		return email;
+	}
+	
 	public String getFullName() {
 		return firstName + " " + lastName;
 	}
@@ -106,6 +109,17 @@ public class Email {
 	}
 	public String getPassword() {
 		return password;
+	}
+	
+	// Show necessary info for new Email User
+	
+	public String showInfo() {
+		return "===========================================" +
+			   "\n    DISPLAY NAME: " + getFullName() +
+			   "\n   COMPANY EMAIL: " + getEmail() +
+			   "\nMAILBOX CAPACITY: " + getMailboxCapacity() + "mb" +
+			   "\n===========================================";
+		
 	}
 	
 }
